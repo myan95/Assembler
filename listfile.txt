@@ -1,0 +1,30 @@
+1000 000000 TESTING  START   1000
+1000 00100c FIRST    LDA     FIVE 
+1003 0C900c          STA     ALPHA,x
+1006 181037          ADD     BETA
+1009 1C100c          sub     ALPHA
+100c 101043 ALPHA    stx     y
+.dahcomment
+100f 000000 FIVE     equ     ALPHA-FIRST+FIRST
+100f 001f40 HNA      WORD    8000
+1012 000000          ORG     HNA 
+100f 132021          stx     =c'test'
+1013 000000 shery    RESW    11
+1034 000000          ltorg                 
+1034 000000 c'test'        BYTE    657374
+1037 000000 BETA     resw    1
+103a 13200a          stx     =x'05'
+103d 1b2007          add     =x'05'
+1040 1C400e          sub     ten
+1043 657374 y        BYTE    c'test'
+1047 000000          ltorg             
+1047 000000 x'05'        WORD    5
+104a 000000          LTORG          
+104a 000000          ORG     4000                        
+4000 454c4453464447 Z        BYTE    c'YELDSFDG'
+4008 1f2009          sub     =x'0a'
+400b 0C4011          STA     eleven
+400e 00000a ten      word    10
+4011 00000b eleven   word    11
+4014 000000          END     TESTING
+4014 000000 x'0a'        WORD    10

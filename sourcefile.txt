@@ -1,0 +1,28 @@
+TESTING  START   1000
+FIRST    LDA     FIVE 
+         STA     ALPHA,x
+         ADD     BETA
+         sub     ALPHA
+ALPHA    stx     y
+.dahcomment
+FIVE     equ     ALPHA-FIRST+FIRST
+HNA      WORD    8000
+         ORG     HNA 
+         stx     =c'test'
+shery    RESW    11
+         ltorg                 
+BETA     resw    1
+         stx     =x'05'
+         add     =x'05'
+         sub     ten
+y        BYTE    c'test'
+         ltorg             
+         LTORG          
+         ORG     4000                        
+Z        BYTE    c'YELDSFDG'
+         sub     =x'0a'
+         STA     eleven
+ten      word    10
+eleven   word    11
+         END     TESTING
+

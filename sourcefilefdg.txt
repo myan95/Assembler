@@ -1,0 +1,25 @@
+TESTING  START   1000
+TESTING  START   YERY
+TESTING  START   1000
+FIRST    LDA     FIVE 
+         STA     ALPHA,x
+         ADD     BETA
+        8sub     ALPHA
+                 one
+         GFJJ    one
+ALPHA    RESW    1
+.dahcomment
+7        WORD    5
+str      BYTE    c'teststring'
+ELEVEN   WORD    HFH
+ELEVEN   WORD    11
+shery    RESW    8SDFG
+one      WORD    1
+BETA     resw    1
+y        BYTE    c'test'
+Z        BYTE    c'YELDSFDG'
+ten      word    10
+         END     TESTING
+         END     1000
+         END     HGGDJ
+
